@@ -15,69 +15,99 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <style>
+    #leaderboard-table {
+      text-align: left;
+    }
+    .left, .middle, .right {display: inline-block; *display: inline; vertical-align: top; align-items: center;}
+    .left {
+      width: 33%;
+      text-align: right;
+    }
+    .middle {
+      width: 500px;
+    }
+    .right {
+      width: 33%;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
+  <div class="outer-container">
+    <div class="left">
+      <div style="margin-right: 2%; margin-left: auto; width: 33%; text-align: center; margin-top: 100px;">
+        <img width="100%" src="flappy.png" />
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/a1exwang/teams2048/blob/react/instructions.md">Click here</a> to customize like this.
       </div>
     </div>
-
-    <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
-      <a class="restart-button">New Game</a>
-    </div>
-
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+    <div class="container middle">
+      <div class="heading">
+        <h1 class="title">2048</h1>
+        <div class="scores-container">
+          <div class="score-container">0</div>
+          <div class="best-container">0</div>
         </div>
       </div>
 
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
+      <div class="above-game">
+        <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+        <!-- <a class="button">Leaderboard</a> -->
+        <a class="restart-button">New Game</a>
       </div>
 
-      <div class="tile-container"></div>
+      <div class="game-container">
+        <div class="game-message">
+          <p></p>
+          <div class="lower">
+            <a class="keep-playing-button">Keep going</a>
+            <a class="retry-button">Try again</a>
+          </div>
+        </div>
 
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+          </div>
+        </div>
+        <div class="tile-container"></div>
+      </div>
+
+      <h3>Leaderboard</h3>
+      <button id="btn-sign-in">Sign In</button>
+      <span id="userinfo">Not signed in</span>
+      <div class="leaderboard-container">
+        <table id="leaderboard-table">
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
-
-    <h3>Leaderboard</h3>
-    <button id="btn-sign-in">Sign In</button>
-    <span id="userinfo">Not signed in</span>
-    <div class="leaderboard-container">
-      <table id="leaderboard-table">
-        <tbody></tbody>
-      </table>
+    <div class="right">
+      <div style="margin-right: auto; margin-left: 2%; width: 33%; text-align: center; margin-top: 100px;">
+        <img width="100%" src="race.png" />
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/a1exwang/teams2048/blob/react/instructions.md">Click here</a> to customize like this.
+      </div>
     </div>
   </div>
 

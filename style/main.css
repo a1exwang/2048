@@ -515,6 +515,11 @@ hr {
   text-align: center;
   float: right; }
 
+.leaderboard-button {
+  display: inline-block;
+  color: red;
+}
+
 .game-explanation {
   margin-top: 50px; }
 
